@@ -178,9 +178,10 @@ fn main()
         wc.hInstance,  // Instance handle
         core::ptr::null_mut()       // Additional application data
     ) };
-    if hwnd.is_null() {
+    if hwnd.is_null() 
+    {
         panic!("Failed to create a window.");
-      }
+    }
     let _previously_visible = unsafe {ShowWindow(hwnd, SW_SHOW)};
 
     // WNDPROC to dispatch messagess
